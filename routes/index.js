@@ -41,15 +41,20 @@ router.get('/Services', function(req, res, next) {
     console.log("~~~~~~ SERVICES ~~~~~~~~~ ")
 });
 
-/* GET Projects page. */
+/* GET Contact page. */
 router.get('/ContactMe', function(req, res, next) {
   res.render('Secondary', 
     { 
-      title: 'ContactMe',
-      name: 'Peter' 
+      title: 'ContactMe'
     }),
     console.log("~~~~~~ CONTACTS ~~~~~~~~~ ")
+}).post('/', function(req, res) {
+    console.log(req.body.firstName)
+    console.log(req.body.emailAd)
+    res.redirect('/ContactMe')
 });
+
+
 
 
 
