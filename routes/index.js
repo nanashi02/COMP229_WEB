@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('Main', 
+  res.render('Main_template', 
     { 
       title: 'Home',
       name: 'Peter' 
@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 
 /* GET About Me page. */
 router.get('/AboutMe', function(req, res, next) {
-  res.render('Main', 
+  res.render('Main_template', 
     { 
       title: 'AboutMe',
       name: 'Peter' 
@@ -23,7 +23,7 @@ router.get('/AboutMe', function(req, res, next) {
 
 /* GET Projects page. */
 router.get('/Projects', function(req, res, next) {
-  res.render('Secondary', 
+  res.render('Sec_template', 
     { 
       title: 'Projects',
       name: 'Peter' 
@@ -33,7 +33,7 @@ router.get('/Projects', function(req, res, next) {
 
 /* GET Projects page. */
 router.get('/Services', function(req, res, next) {
-  res.render('Secondary', 
+  res.render('Sec_template', 
     { 
       title: 'Services',
       name: 'Peter' 
@@ -43,7 +43,7 @@ router.get('/Services', function(req, res, next) {
 
 /* GET Contact page. */
 router.get('/ContactMe', function(req, res, next) {
-  res.render('Secondary', 
+  res.render('Sec_template', 
     { 
       title: 'ContactMe'
     }),
