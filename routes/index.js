@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var userNme;
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('Main_template', 
@@ -9,6 +11,8 @@ router.get('/', function(req, res, next) {
     }),
   console.log("~~~~~~ HOME ~~~~~~~~~ ")
 });
+
+
 
 /* GET About Me page. */
 router.get('/AboutMe', function(req, res, next) {
@@ -47,7 +51,8 @@ router.get('/ContactMe', function(req, res, next) {
 }).post('/', function(req, res) {
     console.log(req.body.firstName)
     console.log(req.body.emailAd)
-    res.redirect('/ContactMe')
+    res.redirect('/')
+    console.log("test run")
 });
 
 

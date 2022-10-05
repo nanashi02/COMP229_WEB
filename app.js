@@ -1,8 +1,8 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var createError = require('http-errors');         //error handler
+var express = require('express');                 //framework
+var path = require('path');         
+var cookieParser = require('cookie-parser');      //to store info
+var logger = require('morgan');                   //to log error
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -11,13 +11,17 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');                    //SETTING THE ENGINE TO READ EJS
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));//default is false, I just set it to true to test for postMethod
+
+//default is false, I just set it to true to test for postMethod
+app.use(express.urlencoded({ extended: true }));
+
+
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));  //SET A DIRECTORY TO READ.
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
