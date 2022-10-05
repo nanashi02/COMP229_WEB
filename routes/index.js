@@ -5,8 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('Main_template', 
     { 
-      title: 'Home',
-      name: 'Peter' 
+      title: 'Home'
     }),
   console.log("~~~~~~ HOME ~~~~~~~~~ ")
 });
@@ -15,8 +14,7 @@ router.get('/', function(req, res, next) {
 router.get('/AboutMe', function(req, res, next) {
   res.render('Main_template', 
     { 
-      title: 'AboutMe',
-      name: 'Peter' 
+      title: 'AboutMe'
     }),
     console.log("~~~~~~ ABOUT ME ~~~~~~~~~ ")
 });
@@ -25,8 +23,7 @@ router.get('/AboutMe', function(req, res, next) {
 router.get('/Projects', function(req, res, next) {
   res.render('Sec_template', 
     { 
-      title: 'Projects',
-      name: 'Peter' 
+      title: 'Projects'
     }),
     console.log("~~~~~~ PROJECTS ~~~~~~~~~ ")
 });
@@ -35,8 +32,7 @@ router.get('/Projects', function(req, res, next) {
 router.get('/Services', function(req, res, next) {
   res.render('Sec_template', 
     { 
-      title: 'Services',
-      name: 'Peter' 
+      title: 'Services'
     }),
     console.log("~~~~~~ SERVICES ~~~~~~~~~ ")
 });
@@ -53,10 +49,6 @@ router.get('/ContactMe', function(req, res, next) {
     console.log(req.body.emailAd)
     res.redirect('/ContactMe')
 });
-
-
-
-
 
 
 module.exports = router;
