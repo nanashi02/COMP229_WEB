@@ -1,5 +1,3 @@
-
-
 var createError = require('http-errors');         //error handler
 var express = require('express');                 //framework
 var path = require('path');         

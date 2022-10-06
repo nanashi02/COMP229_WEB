@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
   res.render('Main_template', 
     { 
       title: 'Home',
+      user: 'undefined'
     }),
   console.log("~~~~~~ HOME ~~~~~~~~~ ")
 });
