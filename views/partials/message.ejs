@@ -1,0 +1,10 @@
+<!----MESSAGE.EJS, PETER JOHN SOTO, SN: 301271157, 10.6.2022    ------>
+<!----PRODUCE A RECEIVED MESSAGE WHEN SUBMITTED BUTTON IS CLICK ------>
+
+<% if (user !== undefined){ %>
+    <div class="alert alertHome">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Thank You <%= user %> !</strong> we will reach out to you soon!
+        <p value="<% locals.userNme == undefined %>"></p>
+    </div>
+<% } %>

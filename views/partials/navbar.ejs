@@ -1,0 +1,61 @@
+<!----NAVBAR.EJS, PETER JOHN SOTO, SN: 301271157, 10.6.2022 ------>
+<!----CALL THE NAVIGATION BAR                               ------>
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+
+            <a href="/" class="navbar-brand">
+                <img src="images/PJ_LOGO2.png" style="width:120px">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="nav navbar-var ms-auto p-1 bg-light">
+                    
+                        <li class="nav-item">
+                            <% if (title == "Home") { %>
+                                <a href="/" class="nav-link active">HOME</a>
+                            <% } else { %>
+                                <a href="/" class="nav-link">HOME</a>
+                            <% } %>     
+                        </li>
+                        
+                        <li class="nav-item">
+                            <% if (title == "AboutMe") { %>
+                                <a href="/AboutMe" class="nav-link active">ABOUT ME</a>
+                            <% } else { %>
+                                <a href="/AboutMe" class="nav-link">ABOUT ME</a>
+                            <% } %>     
+                        </li>
+
+                        <li class="nav-item">
+                            <% if (title == "Projects") { %>
+                                <a href="/Projects" class="nav-link active">PROJECTS</a>
+                            <% } else { %>
+                                <a href="/Projects" class="nav-link">PROJECTS</a>
+                            <% } %>     
+                        </li>
+                    
+                        <li class="nav-item">
+                            <% if (title == "Services") { %>
+                                <a href="/Services" class="nav-link active">SERVICES</a>
+                            <% } else { %>
+                                <a href="/Services" class="nav-link">SERVICES</a>
+                            <% } %>     
+                        </li>
+
+                        <li class="nav-item">
+                            <% if (title == "ContactMe") { %>
+                                <a href="/ContactMe" class="nav-link active">CONTACT ME</a>
+                            <% } else { %>
+                                <a href="/ContactMe" class="nav-link">CONTACT ME</a>
+                            <% } %>     
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

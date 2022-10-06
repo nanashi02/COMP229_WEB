@@ -1,0 +1,85 @@
+<!----HOMEANDABOUTME.EJS, PETER JOHN SOTO, SN: 301271157, 10.6.2022,  ------>
+<!----TEMPLATE FOR HOME & ABOUT_ME PAGE (BODY CONTENT)                ------>
+
+<% if (title == "Home") { %>
+    <div id="homePage" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                
+
+                <div class="container homePageImg"
+                    style="background-image: url(images/homeWallpaper.jpg);"
+                >
+                <%- include ./message.ejs %>
+                <div class="centered">
+                    Welcome to
+                </div>
+                <div class="centered1">
+                    <span class="text-warning">
+                        <img src="images/PJ_LOGO2.png" class="imgLogo rounded-5 shadow-3" alt="Logo_Image" width=500%> 
+                    </span>
+                </div>
+                <div class="centered2">
+                    We CATER to what you Need.
+                </div>
+                <div class="centered3">
+                    Our <strong>MISSION</strong> is to give what the client needs; quality services 
+                    that are brought by trust and commitment. Let us help you, your success means our success.
+                </div>
+                <button class="btn btnLearn btn-secondary" type="button">
+                    <a class="btn" href="/AboutMe">Learn More</a>
+                </button>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div> 
+
+        
+
+    </div> 
+<% } else { %>
+    <div id="AboutMe" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="container AbtPageImg"
+            style="background-image: url(images/AboutMeBG.png);"
+            >
+                <br>
+                <br>
+                <h1 class="h1AboutMe">Hi, I&#x2019m <strong>Peter</strong></h1>
+                <h1 class="h2AboutMe"> Developer . Engineer . BIM Modeler . Designer </h1>
+                <p>
+                    <img src="images/AboutME_Image.png" class="img-fluid imgMe rounded-5 shadow-3" alt="My_Image" width=13% height=13%> 
+                </p>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8 p-5">
+                    <hr>
+                    <p>
+                        Hi I&#x2019m Peter John Soto, a licensed <em>civil engineer, software developer, BIM Modeler,</em> and <em>occasional designer.</em> 
+                        I developed my passion in software development while working as an API developer for more than 10 years. I am
+                        eager to discover the rich world of software development and hopeful to be a contributor to the evolution of technologies.
+                    </p>
+                    <p>
+                        Currently got hook in <strong>Web & Game development</strong> and <strong>Artificial Intelligence.</strong>
+                    </p>
+                    <p>
+                        In my freetime, I love watching anime, korean series, and playing basketball. My favorite NBA team is the Golden State Warriors (Go Dubs!). 
+                        I also have interest in designing like real-time rendering (using BIM software), photo editing, logo making and many more.
+                    </p>
+                    <hr>
+                    <p class="lineBreak">.</p>
+
+                    <p><a href="images/CV-PETER JOHN SOTO - SOFTWARE DEVELOPER.pdf" class="btn btnCV btn-dark">Read My Resume</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div> 
+</div> 
+<% } %> 
+
+
+
+
