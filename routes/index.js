@@ -7,11 +7,30 @@ var userNme;
 router.get('/', function(req, res, next) {
   res.render('Main_template', 
     { 
-      title: 'Home'
+      title: 'Home',
     }),
   console.log("~~~~~~ HOME ~~~~~~~~~ ")
 });
 
+/* GET home page With Thank You Message */
+router.get('/ThankYou', function(req, res, next) {
+  res.render('Main_template', 
+    { 
+      title: 'Home',
+      user: userNme
+    }),
+  console.log("~~~~~~ HOME ~~~~~~~~~ ")
+  console.log("Home Now " + userNme)
+});
+
+/* POST home page With Thank You Message */
+router.post('/ThankYou', function(req, res, next) {
+  userNme = req.body.firstName;
+    console.log(req.body.firstName)
+    console.log(req.body.emailAd)
+    res.redirect('/ThankYou')
+    console.log("test run")
+});
 
 
 /* GET About Me page. */
@@ -48,11 +67,6 @@ router.get('/ContactMe', function(req, res, next) {
       title: 'ContactMe'
     }),
     console.log("~~~~~~ CONTACTS ~~~~~~~~~ ")
-}).post('/', function(req, res) {
-    console.log(req.body.firstName)
-    console.log(req.body.emailAd)
-    res.redirect('/')
-    console.log("test run")
 });
 
 
