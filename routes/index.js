@@ -52,7 +52,7 @@ router.get('/Projects', function(req, res, next) {
     console.log("~~~~~~ PROJECTS ~~~~~~~~~ ")
 });
 
-/* GET Projects page. */
+/* GET Services page. */
 router.get('/Services', function(req, res, next) {
   res.render('Sec_template', 
     { 
